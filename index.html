@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Tdy</title>
+		<link rel="stylesheet" href="tdy.css">
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="logo"><span class="logo-text">Tdy</span><span class="logo-dot">.</span></h1>
+			<div class="container-content">
+				<div class="tdy-square-container">
+					<div class="row">
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+					</div>
+					<div class="row">
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+					</div>
+					<div class="row">
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+					</div>
+					<div class="row">
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+					</div>
+					<div class="row">
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+					</div>
+					<div class="row">
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+					</div>
+					<div class="row">
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+					</div>
+					<div class="row centered">
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+						<div class="tdy-square"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="module">
+			import { DateTime } from "./luxon.min.js";
+			var weekNum = DateTime.now().localWeekNumber;
+			var elems = document.getElementsByClassName("tdy-square");
+			for( var i = 0; i < elems.length; i++) {
+				console.log(elems[i]);
+				if ( i+1 > weekNum ) {
+					break;
+				}
+				if ( i+1 == weekNum ) {
+					elems[i].classList.add("today");
+					break;
+				}
+
+				elems[i].classList.add("passed");
+			}
+		</script>
+	</body>
+</html>
