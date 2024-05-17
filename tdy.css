@@ -56,6 +56,18 @@ body {
 	background-color: var(--tdy-future-color);
 }
 
+.days .tdy-square {
+	width: 10px;
+	height: 10px;
+	margin: 4px;
+}
+
+.days .today {
+	width: 8px;
+	height: 8px;
+	border: 1px solid var(--main-bg-color);
+}
+
 .centered {
 	justify-content: center;
 }
